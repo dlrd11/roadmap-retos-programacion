@@ -2,8 +2,10 @@ name: My first action
 
 on:
   push: 
-    branches: [ config_actions ]
+    branches: config_actions
   workflow_dispatch:
+  schedule:
+    - cron: '30 8 * * 1'
 
 jobs:
   build:
